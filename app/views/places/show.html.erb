@@ -1,2 +1,16 @@
-<h1>Places#show</h1>
-<p>Find me in app/views/places/show.html.erb</p>
+<h1>場所の詳細</h1>
+<table border="1">
+  <tr>
+    <th>説明</th>
+    <td><%= @place.description %></td>
+  </tr>
+  <tr>
+    <th>緯度</th>
+    <td><%= @place.latitude %></td>
+  </tr>
+  <tr>
+    <th>経度</th>
+    <td><%= @place.longitude %></td>
+  </tr>
+</table>
+<%= link_to '場所の一覧へ戻る', places_path %></p>
