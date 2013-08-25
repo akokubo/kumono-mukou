@@ -12,7 +12,7 @@
     <tr>
       <td><%= place.latitude %></td>
       <td><%= place.longitude %></td>
-      <td><%= place.description %></td>
+      <td><%= link_to place.description, place %></td>
     </tr>
     <% end %>
   </tbody>
