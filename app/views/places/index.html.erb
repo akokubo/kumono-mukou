@@ -1,2 +1,21 @@
-<h1>Places#index</h1>
-<p>Find me in app/views/places/index.html.erb</p>
+<h1>場所の一覧</h1>
+<table border="1">
+  <thead>
+    <tr>
+      <th>緯度</th>
+      <th>経度</th>
+      <th>説明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @places.each do |place| %>
+    <tr>
+      <td><%= place.latitude %></td>
+      <td><%= place.longitude %></td>
+      <td><%= place.description %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "ホーム", root_path %>
