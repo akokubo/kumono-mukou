@@ -1,5 +1,6 @@
 KumonoMukou::Application.routes.draw do
   resources :places, only: [:index, :show]
+  match '/map', to: 'static_pages#map', via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
