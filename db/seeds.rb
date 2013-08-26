@@ -29,12 +29,12 @@ places = Place.create([
   { latitude: 41.007164, longitude: 140.648151, description: '瀬辺地駅近く制限高2.7m標識' },
   { latitude: 40.828663, longitude: 140.734895, description: '青森駅前' },
   { latitude: 40.828760, longitude: 140.734728, description: '青森駅改札' },
-  { latitude: 0.000000, longitude: 0.000000, description: '津軽線車両内' },
-  { latitude: 0.000000, longitude: 0.000000, description: '津軽線車両内' },
-  { latitude: 0.000000, longitude: 0.000000, description: '津軽線車両内' },
-  { latitude: 0.000000, longitude: 0.000000, description: '津軽線車両内' },
-  { latitude: 0.000000, longitude: 0.000000, description: '津軽線車両内' },
-  { latitude: 0.000000, longitude: 0.000000, description: '津軽線車両内' },
-  { latitude: 0.000000, longitude: 0.000000, description: '津軽線車両内' },
-  { latitude: 0.000000, longitude: 0.000000, description: '津軽線車両内' }
+  { description: '津軽線車両内' },
+  { description: '津軽線車両内' },
+  { description: '津軽線車両内' },
+  { description: '津軽線車両内' },
+  { description: '津軽線車両内' },
+  { description: '津軽線車両内' },
+  { description: '津軽線車両内' },
+  { description: '津軽線車両内' }
 ])
