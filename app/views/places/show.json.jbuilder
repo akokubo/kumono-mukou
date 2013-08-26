@@ -1,1 +1,1 @@
-json.extract! @place, :latitude, :longitude, :description
+json.extract! @place, :latitude, :longitude, :description, :id
