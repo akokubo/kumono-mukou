@@ -28,7 +28,7 @@ MAPRAMBLE.createMap = function () {
   var centerLatLng, options;
 
   // 最初に中心に初石駅を表示させる
-  centerLatLng = new google.maps.LatLng(this.initial.latitude, this.initial.longitude);
+  centerLatLng = new google.maps.LatLng(MAPRAMBLE.initial.latitude, MAPRAMBLE.initial.longitude);
 
   options = {
     zoom: this.initial.zoom, // 拡大率
@@ -60,25 +60,26 @@ MAPRAMBLE.addMarker = function (place) {
   'use strict';
   var marker, options;
 
-  options = {
-      position: new google.maps.LatLng(place.latitude, place.longitude),
-      map: MAPRAMBLE.map,
-      icon: "http://maps.google.com/mapfiles/marker.png"
-  };
+  if (place.hasOwnProperty('latitude') && place.hasOwnProperty('longitude') && place.latitude !== null && place.longitude !== null) {
+    options = {
+        position: new google.maps.LatLng(place.latitude, place.longitude),
+        map: MAPRAMBLE.map,
+        icon: "http://maps.google.com/mapfiles/marker.png"
+    };
 
-  // マーカーの生成
-  marker = new google.maps.Marker(options);
+    // マーカーの生成
+    marker = new google.maps.Marker(options);
 
-  // マーカーにイベントハンドラを設定
-  google.maps.event.addListener(marker, 'click', function () {
-    console.log('click');
-    var infoWindow = new google.maps.InfoWindow();
-    var content = '<p>' + place.description + '</p>';
-    content += '<p><img src="/assets/' + place.id + '.jpg" alt="' + place.description + '" width="320"></p>';
-    infoWindow.setContent(content);
-    infoWindow.open(MAPRAMBLE.map, marker);
-  });
-
+    // マーカーにイベントハンドラを設定
+    google.maps.event.addListener(marker, 'click', function () {
+      console.log('click');
+      var infoWindow = new google.maps.InfoWindow();
+      var content = '<p>' + place.description + '</p>';
+      content += '<p><img src="/assets/' + place.id + '.jpg" alt="' + place.description + '" width="320"></p>';
+      infoWindow.setContent(content);
+      infoWindow.open(MAPRAMBLE.map, marker);
+    });
+  }
 };
 
 // メインプログラム
