@@ -14,8 +14,12 @@
     <th>経度</th>
     <td><%= @place.longitude %></td>
   </tr>
+  <tr>
+    <th>写真URL</th>
+    <td><%= place_url(@place, format: @place.photo.extension) %></td>
+  </tr>
 </table>
 
-<p><%= image_tag("#{@place.id}.jpg", alt: @place.description, width: 320)%></p>
+<p><%= place_image_tag @place, width: 320 %></p>
 
 <%= link_to '場所の一覧へ戻る', places_path %></p>

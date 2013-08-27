@@ -38,3 +38,12 @@ places = Place.create([
   { description: '津軽線車両内' },
   { description: '津軽線車両内' }
 ])
+
+1.upto(31) do |idx|
+  filename = Rails.root.join("db/seeds/development", "photo/#{idx}.jpg")
+  Photo.create({
+    data: File.open(filename, "rb").read,
+    content_type: "image/jpeg",
+    place_id: idx
+  })
+end

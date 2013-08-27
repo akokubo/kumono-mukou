@@ -75,7 +75,7 @@ MAPRAMBLE.addMarker = function (place) {
       console.log('click');
       var infoWindow = new google.maps.InfoWindow();
       var content = '<p>' + place.description + '</p>';
-      content += '<p><img src="/assets/' + place.id + '.jpg" alt="' + place.description + '" width="320"></p>';
+      content += '<p><img src="' + place.photo_url + '" alt="' + place.description + '" width="320"></p>';
       infoWindow.setContent(content);
       infoWindow.open(MAPRAMBLE.map, marker);
     });

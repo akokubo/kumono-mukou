@@ -6,6 +6,7 @@
       <th>緯度</th>
       <th>経度</th>
       <th>説明</th>
+      <th>写真URL</th>
     </tr>
   </thead>
   <tbody>
@@ -14,6 +15,7 @@
       <td><%= place.latitude %></td>
       <td><%= place.longitude %></td>
       <td><%= link_to place.description, place %></td>
+      <td><%= link_to place_url(place, format: place.photo.extension), place_url(place, format: place.photo.extension) %></td>
     </tr>
     <% end %>
   </tbody>

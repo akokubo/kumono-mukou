@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130825134122) do
+ActiveRecord::Schema.define(version: 20130827024830) do
+
+  create_table "photos", force: true do |t|
+    t.binary   "data"
+    t.string   "content_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "place_id"
+  end
 
   create_table "places", force: true do |t|
     t.float    "latitude"
