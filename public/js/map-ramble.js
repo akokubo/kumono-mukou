@@ -72,7 +72,7 @@ MAPRAMBLE.addMarker = function (place) {
 
     // マーカーにイベントハンドラを設定
     google.maps.event.addListener(marker, 'click', function () {
-      console.log('click');
+      //console.log('click');
       var infoWindow = new google.maps.InfoWindow();
       var content = '<p>' + place.description + '</p>';
       content += '<p><img src="' + place.photo_url + '" alt="' + place.description + '" width="320"></p>';
